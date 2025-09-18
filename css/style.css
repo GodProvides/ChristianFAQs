@@ -1,199 +1,152 @@
-/* =========================
-   Base Styles
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* ===========================
+   General Styles
+=========================== */
 body {
-  background-color: #e6f0ff; /* light blue background */
-  color: #0a2a66; /* dark blue text */
-  line-height: 1.6;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f0ff; /* light blue background */
+    color: #0d1a66; /* dark blue text for readability */
 }
 
-/* =========================
-   Header & Navigation
-========================= */
+a {
+    text-decoration: none;
+    color: #1a73e8; /* brighter blue for links */
+}
+
 header {
-  background-color: #3366cc;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #1a52c2; /* medium blue header */
+    padding: 15px 0;
 }
 
 header nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 25px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
 }
 
 header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  background-color: #2851a3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #ffcc00; /* subtle highlight on hover */
 }
 
-/* =========================
-   Main Sections
-========================= */
 main {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #0d1a66;
 }
 
 section {
-  background-color: #f0f5ff;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+    margin-bottom: 50px;
+    background-color: #ffffff; /* white sections for contrast */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-h1, h2 {
-  margin-bottom: 15px;
-  color: #0a2a66;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-/* =========================
+/* ===========================
    Video Section
-========================= */
+=========================== */
 #video-of-the-month iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 315px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    border: none;
 }
 
-#video-of-the-month iframe:hover {
-  transform: scale(1.02);
-}
-
-/* =========================
+/* ===========================
    Newsletter Section
-========================= */
+=========================== */
 #newsletter iframe {
-  width: 100%;
-  max-width: 640px;
-  height: 600px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+    transform: none !important;      /* prevent scaling */
+    transition: none !important;     /* prevent hover blur */
 }
 
-#newsletter iframe:hover {
-  transform: scale(1.01);
-}
-
-/* =========================
+/* ===========================
    FAQ Section
-========================= */
-.faq-item {
-  background-color: #d9e6ff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.faq-item:hover {
-  background-color: #c0d4ff;
-}
-
+=========================== */
 .faq-item h3 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #d9e6ff;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+    background-color: #b3ccff;
 }
 
 .faq-item .answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding-left: 5px;
+    display: none;
+    padding: 10px;
+    border-left: 4px solid #1a52c2;
+    margin-bottom: 10px;
 }
 
 .faq-item .answer.show {
-  max-height: 200px;
+    display: block;
 }
 
-/* =========================
-   Buttons
-========================= */
-button, input[type="submit"] {
-  background-color: #3366cc;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 18px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* ===========================
+   Debate / Comment Section
+=========================== */
+.commninja_component {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-button:hover, input[type="submit"]:hover {
-  background-color: #2851a3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* =========================
+/* ===========================
    Footer
-========================= */
+=========================== */
 footer {
-  background-color: #3366cc;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    background-color: #1a52c2;
+    color: #ffffff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
-/* =========================
+/* ===========================
    Mobile Responsiveness
-========================= */
+=========================== */
 @media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  header nav ul li {
-    margin: 8px 0;
-  }
+    header nav ul li {
+        margin: 10px 0;
+    }
 
-  #video-of-the-month iframe {
-    height: 220px;
-  }
+    #video-of-the-month iframe,
+    #newsletter iframe {
+        height: auto;
+    }
 
-  #newsletter iframe {
-    height: 500px;
-  }
+    main {
+        padding: 20px 15px;
+    }
 }
-
