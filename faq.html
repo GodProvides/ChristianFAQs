@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - God Provides</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="debate.html">Debate</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <h3>What is prayer?</h3>
+      <p class="answer">Prayer is talking to God. It can be done anytime and anywhere. It helps you feel closer to Him.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I read the Bible?</h3>
+      <p class="answer">Start with a short book like John. Take one chapter at a time and reflect on it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why does God allow suffering?</h3>
+      <p class="answer">Suffering is difficult, but it helps us grow spiritually, learn compassion, and rely on God.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 God Provides</p>
+  </footer>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq-item h3');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.nextElementSibling.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+</html>
